@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class Nums {
 
@@ -72,7 +73,15 @@ public class Nums {
 	}
 
 	public ArrayList<Integer> toArray(int n) {
-		
+		List<Integer> list = new ArrayList<Integer>();
+		Stack<Integer> stack = new ArrayStack<Integer<();
+		for (int i = 0; i < this.getCount(); i++) {
+			stack.push(n % Math.pow(10, (i + 1)));
+		}
+		while (!stack.isEmpty()) {
+			list.add(stack.pop());
+		}
+		return list;
 	}
 
 	public int reverse(int n) {
@@ -88,6 +97,10 @@ public class Nums {
 	}
 
 	public int getAverage(int n) {
+
+	}
+
+	public int sort(int n) {
 
 	}
 
