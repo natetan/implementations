@@ -49,4 +49,23 @@ public class Nums {
 			}
 		}
 	}
+
+	public int getRunningSum(int n) {
+		this.negativeCheck(n);
+		if (n / 10 == 0) {
+			return n;
+		} else {
+			return n % 10 + getRunningSum(n / 10);
+		}
+	}
+
+	public int getCount(int n) {
+		this.negativeCheck(n);
+	}
+
+	private void negativeCheck(int n) {
+		if (n < 0) {
+			throw new IllegalArgumentException("Number can't be negative");
+		}
+	}
 }
