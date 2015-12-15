@@ -61,6 +61,11 @@ public class Nums {
 
 	public int getCount(int n) {
 		this.negativeCheck(n);
+		if (n / 10 == 0) {
+			return 1;
+		} else {
+			return 1 + getCount(n / 10);
+		}
 	}
 
 	private void negativeCheck(int n) {
