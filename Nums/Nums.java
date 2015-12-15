@@ -85,7 +85,21 @@ public class Nums {
 	}
 
 	public int reverse(int n) {
+		List<Integer> list = new ArrayList<Integer>();
+		list = this.toArray(n);
+		List<Integer> newList = new ArrayList<Integer>();
+		for (int i = list.size() - 1; i >= 0; i--) {
+			newList.add(list.get(i));
+		}
+		return this.printFromArray(newList);
+	}
 
+	public String printFromArray(List<Integer> list) {
+		String output = "";
+		for (int i = 0; i < list.size(); i++) {
+			output += list.get(i);
+		}
+		return output;
 	}
 
 	public int getMode(int n) {
@@ -96,8 +110,8 @@ public class Nums {
 
 	}
 
-	public int getAverage(int n) {
-
+	public double getAverage(int n) {
+		return this.getRunningSum(n) / this.getCount(n);
 	}
 
 	public int sort(int n) {
