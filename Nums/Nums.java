@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Nums {
 
 	private int num;
@@ -66,6 +69,30 @@ public class Nums {
 		} else {
 			return 1 + getCount(n / 10);
 		}
+	}
+
+	public ArrayList<Integer> toArray(int n) {
+		
+	}
+
+	public int reverse(int n) {
+
+	}
+
+	public int getMode(int n) {
+
+	}
+
+	public int getMedian(int n) {
+
+	}
+
+	public int getAverage(int n) {
+
+	}
+
+	public String toString(int n) {
+		return n + "";
 	}
 
 	private void negativeCheck(int n) {
