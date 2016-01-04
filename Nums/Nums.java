@@ -1,6 +1,8 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Stack;
+import java.util.Map;
 
 public class Nums {
 
@@ -115,7 +117,9 @@ public class Nums {
 	}
 
 	public int sort(int n) {
-
+		List<Integer> list = this.toArray(n);
+		Collections.sort(list);
+		return Integer.parseInt(this.printFromArray(list));
 	}
 
 	public String toString(int n) {
